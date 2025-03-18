@@ -1,0 +1,41 @@
+.order-coffee-button {
+  width: 100px;
+  height: 100px;
+  background: aquamarine;
+  border-radius: 50px;
+  margin-left: calc(50% - 50px);
+  margin-top: 100px;
+}
+
+.order-coffee-button:hover {
+  background: aqua;
+}
+
+.reset {
+  display: block;
+  width: 60px;
+  margin-left: calc(50% - 30px);
+  margin-top: 30px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  border: 5px solid #000;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin-left: calc(50% - 24px);
+  margin-top: 124px;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

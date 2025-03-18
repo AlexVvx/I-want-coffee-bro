@@ -1,0 +1,7 @@
+@if (loading$ | async) { <span class="loader"></span> } @else {
+<button class="order-coffee-button" (click)="orderCoffee()">
+  {{ (placed$ | async) ? 'Come and get your coffee' : 'I want coffee!' }}
+</button>
+} @if (placed$ | async) {
+<button class="reset" (click)="clearOrder()">Reset</button>
+}
