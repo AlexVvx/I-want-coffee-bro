@@ -6,6 +6,7 @@ import { provideEffects } from '@ngrx/effects';
 import * as fromOrder from './+state/order.reducer';
 import { OrderEffects } from './+state/order.effects';
 import { OrderFacade } from './+state/order.facade';
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,5 +17,6 @@ export const appConfig: ApplicationConfig = {
     provideEffects(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(appRoutes),
+    provideHttpClient(),
   ],
 };

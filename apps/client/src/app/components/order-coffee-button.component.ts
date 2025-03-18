@@ -13,9 +13,11 @@ import { Observable } from 'rxjs';
 export class OrderCoffeeButtonComponent {
   loading$: Observable<boolean>;
   placed$: Observable<boolean>;
+  orderError$: Observable<any>
   constructor(private orderFacade: OrderFacade) {
     this.loading$ = this.orderFacade.loading$;
     this.placed$ = this.orderFacade.placed$;
+    this.orderError$ = this.orderFacade.orderError$;
   }
 
   orderCoffee() {

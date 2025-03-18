@@ -1,7 +1,10 @@
-@if (loading$ | async) { <span class="loader"></span> } @else {
+@if (loading$ | async) { <span class="loader"></span> } @else if (orderError$ |
+async) {
+<p class="error-placing-order">Error placing order</p>
+} @else {
 <button class="order-coffee-button" (click)="orderCoffee()">
   {{ (placed$ | async) ? 'Come and get your coffee' : 'I want coffee!' }}
 </button>
-} @if (placed$ | async) {
+} @if ((placed$ | async) || (orderError$ | async)) {
 <button class="reset" (click)="clearOrder()">Reset</button>
 }

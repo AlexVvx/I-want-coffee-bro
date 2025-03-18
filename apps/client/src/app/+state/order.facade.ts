@@ -18,6 +18,7 @@ export class OrderFacade {
   placed$ = this.store.pipe(select(OrderSelectors.selectOrderPlaced));
   loading$ = this.store.pipe(select(OrderSelectors.selectOrderLoading));
   order$ = this.store.pipe(select(OrderSelectors.selectOrder));
+  orderError$ = this.store.pipe(select(OrderSelectors.selectOrderError));
 
   /**
    * Use the initialization action to perform one
